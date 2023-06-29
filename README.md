@@ -33,7 +33,7 @@ If you find DeepIM useful in your research, please consider citing:
    cd ycb_render
    git submodule update --init --recursive
    ```
-3. build docker 
+3. Build docker image
    ```Shell
    cd docker
    ./build.sh
