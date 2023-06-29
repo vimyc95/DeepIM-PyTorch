@@ -1,8 +1,8 @@
 cd lib/point_matching_loss/;
-python3 setup.py develop --user;
+python setup.py develop;
 cd ../utils;
-python3 setup.py build_ext --inplace;
+python setup.py build_ext --inplace;
 cd ../../ycb_render;
-python3 setup.py develop --user
+python setup.py develop 
 
 

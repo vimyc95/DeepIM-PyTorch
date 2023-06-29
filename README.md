@@ -46,8 +46,6 @@ If you find DeepIM useful in your research, please consider citing:
 5. After enter the container, you need to build some package
    ```Shell
    ./build.sh
-   cd ycb_render
-   python setup.py develop
    ```
 
 
