@@ -23,45 +23,33 @@ If you find DeepIM useful in your research, please consider citing:
         Year = {2018}
     }
 
-### Required environment
-
-- Ubuntu 16.04 or above
-- PyTorch 0.4.1 or above
-- CUDA 9.1 or above
-
 ### Installation
-
-Use python3. If ROS is needed, compile with python2.
-
-1. Install [PyTorch](https://pytorch.org/).
-
-2. Install python packages
+1. Clone the REPO
    ```Shell
-   pip install -r requirement.txt
+   git clone https://github.com/vimyc95/DeepIM-PyTorch.git
    ```
-
-3. Initialize the submodules in ycb_render
+2. Clone pybind
    ```Shell
+   cd ycb_render
    git submodule update --init --recursive
    ```
+3. build docker 
+   ```Shell
+   cd docker
+   ./build.sh
+   ```
+4. Run docker 
+   ```Shell
+   cd docker
+   ./run_docker.sh
+   ```
+5. After enter the container, you need to build some package
+   ```Shell
+   ./build.sh
+   cd ycb_render
+   python setup.py develop
+   ```
 
-4. Compile the point matching loss layer in $ROOT/lib.
-    ```Shell
-    cd $ROOT/lib/point_matching_loss
-    sudo python setup.py install
-    ```
-
-5. Compile cython components
-    ```Shell
-    cd $ROOT/lib/utils
-    python setup.py build_ext --inplace
-    ```
-
-6. Compile the ycb_render in $ROOT/ycb_render
-    ```Shell
-    cd $ROOT/ycb_render
-    sudo python setup.py develop
-    ```
 
 ### Download
 
